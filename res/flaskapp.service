@@ -1,0 +1,12 @@
+# This file is for running flask application via gunicorn. It is originally located in etc/systemd/system/ on our ec2 instance.
+
+[Unit]
+Description=Gunicorn instance for a simple flask app
+After=network.target
+
+[Service]
+WorkingDirectory=/home/ec2-user/2021-ca400-connok27-ohanlow2/src/Flask_App
+ExecStart=/home/ec2-user/.local/bin/gunicorn -b localhost:8000 app:app
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+    <div class="choice-text">
+        <br><br>
+        <h1 id="choice-header-jab"></h1>
+        <br>
+        <p id="choice-p" style="display:none;">{{choice}}</p>
+        <img id="choice-img-jab" class="training-image" src="{{ url_for('static', filename='styles/images/banner/jab_annotated_smaller.jpg') }}" alt="" style="display:none;"></img>
+        <div id="choice-p-text-jab" style="display:none;">
+            <p>Your form will be analysed based on the following five attribute (as shown):</p>
+            <p>1. Your right hand should should be protecting the chin.</p>
+            <p>2. Your right elbow should be protecting your body.</p>
+            <p>3. Your left shoulder should cover your chin when jabbing.</p>
+            <p>4. The elbow of your jabbing arm should be coming from underneath the jab, instead of from the side.</p>
+            <p>5. Try not to overcommit when jabbing. In other words, you shouldn't be leaning forward and your weight should be on your back leg, not the front leg.</p>
+        </div>
+
+        <p>Note: We only predict strikes in the Orthodox stance i.e. right leg forward, left leg back. This is because most people are right handed and it is the stance most often taught to beginners. We hope to bring support for the Southpaw stance in the future.</p>
+
+        <script type="text/javascript">
+            // Change text to be the text for the chosen exercise
+            var text = document.getElementById("choice-p").innerHTML;
+            console.log(text);
+
+            if(text == "jab") {
+                // Change text to match jab training
+                document.getElementById('choice-header-jab').innerHTML = "Jab Training";
+                document.getElementById('choice-img-jab').style.display = "inline";
+                document.getElementById('choice-p-text-jab').style.display = "inline";
+            }
+        </script>
+
+        <br><br>
+
+        <div class="options">
+            <h2>Options</h2>
+            <br>
+            <div class="choice-column-1">
+                <div class="card-header">Live Form Checker</div>
+                <div class="card-body">
+                    <p class="card-text"></p>
+                    <p>We will ask for access to your local embedded camera so you can record yourself perform the requested training regime.</p>
+                    <p>Click Record to try it out.</p>
+                    <a type="button" class="btn btn-primary" href="/choice?choice=live">Record</a>
+                </div>
+            </div>
+            <div class="choice-column-hidden" style="display:none;">
+                <!-- Ignore -->
+            </div>
+            <div class="choice-column-2">
+                <div class="card-header">Upload Pre-recorded Video</div>
+                <div class="card-body">
+                    <p class="card-text"></p>
+                    <p>Record the training regime externally. Then select the file that you wish to get analysed.</p>
+                    <p>Click Upload to try it out!</p>
+                    <a type="button" class="btn btn-primary" href="/choice?choice=upload">Upload</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

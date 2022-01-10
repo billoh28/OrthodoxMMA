@@ -1,0 +1,17 @@
+{
+  "name": "Orthodox PWA",
+  "short_name": "Orthodox",
+  "theme_color": "#CBD394",
+  "background_color": "#F1F7C6",
+  "icons": [
+    {
+        "src": "/static/images/favicon.ico",
+        "type": "image/ico",
+        "sizes": "152x152"
+
+    }
+  ],
+  "start_url": "/login",
+  "display": "standalone",
+  "orientation": "any"
+}

@@ -1,0 +1,285 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="video-page">
+    <br>
+    <h3>Start Your Training</h3>
+    <br>
+    <p style="display:none;color:red;" id="error">An error occured. Please try again.</p>
+    <p style="display:none;color:red;" id="cameraerr">An error occured. This could be because another applciation is using the selected camera.</p>
+    <p style="display:none;color:red;" id="noCamera">No camera detected. Please use file upload option instead.</p>
+    <p style="text-align: center;">The recording will commence once you press start recording and finish after 5 seconds.</p>
+    <p style="text-align: center;">Place yourself 2 meters away from the camera and perform the correct action.</p>
+    <button id="flip" class="btn btn-primary" style="display:none;">Flip Camera</button>
+    <br><br>
+    <div class="webcam" id="webcam">
+        <video id="video" playsinline>Video stream not available.</video>
+        <br>
+        <button id="startBtn" class="btn btn-primary">Start Recording</button>
+        <button id="recordBtn" class="btn btn-danger" style="display:none;">Recording...</button>
+        <h1 id="timer" class="btn btn-danger" style="display:none;">Time : <span id="count"></span></h1>
+
+    </div>
+
+    <br><br>
+
+
+    <div id="progress" style="visibility:hidden;">
+        <br><br>
+        <h3 id="progress-text" style="text-align:center;display:block;width:100%;">Calculating results...</h3>
+        <br>
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        var video = document.querySelector("video"); // Video (star of the show)
+
+        var flipBtn = document.getElementById("flip"); // Give the option to flip the camera if the user has to ability to
+
+        var supports = navigator.mediaDevices.getSupportedConstraints(); // See if flipping camera is viable
+        
+        if( supports['facingMode'] === true ) {
+            flipBtn.disabled = false;
+            document.getElementById("flip").style.display = "inline";
+        }
+
+        //Duck testing on what browser the user is using.
+
+        // Boolean for changing camera
+        var shouldFaceUser = true;
+
+        // Opera 8.0+
+        var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+
+        // Firefox 1.0+
+        var isFirefox = typeof InstallTrigger !== 'undefined';
+
+        // Safari 3.0+ "[object HTMLElementConstructor]" 
+        var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
+        // Internet Explorer 6-11
+        var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+        // Edge 20+
+        var isEdge = !isIE && !!window.StyleMedia;
+
+        // Chrome 1 - 79
+        var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+        // Edge (based on chromium) detection
+        var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
+
+        // Blink engine detection
+        var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+
+        var ismobile = false;
+        if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            var ismobile = true;
+        }
+
+        // document.body.innerHTML = output;
+        function setConstraints() {
+
+            //Firefox
+            if (isFirefox) {
+                var constraints = {
+                video: {
+                    aspectRatio: { exact: 0.5625 },
+                    audio: false, 
+
+                    facingMode: shouldFaceUser ? "user" : "environment",
+                    mandatory: {
+                        maxWidth: 2160,
+                        maxHeight: 3840,
+                        minWidth: 360,
+                        minHeight: 640       
+                    }
+                    }
+                };
+            }
+            // Chrome on desktop
+            else if (isChrome && !ismobile) {
+                var constraints = {
+                video: {
+                    aspectRatio: { exact: 0.5625 },
+                    audio: false,      
+                    facingMode: shouldFaceUser ? "user" : "environment",
+                    }
+                };
+            }
+
+            // Chrome on mobile
+            else if (isChrome && ismobile) {
+                var constraints = {
+                video: {
+                    //facingMode: "environment",
+                    //aspectRatio: { exact: 0.5625 },
+                    audio: false, 
+                    //width: 1080, 
+                    //height: 1980,
+                    // resizemode: "crop-and-scale",
+                    //width: { min: 360, ideal: 1080, max: 2160 },
+                    //height: { min: 640, ideal: 1980, max: 3840 },
+                    facingMode: shouldFaceUser ? "user" : "environment",
+                   //   mandatory: {
+                   //      maxWidth: 2160,
+                   //      maxHeight: 3840,
+                   //      minWidth: 360,
+                   //      minHeight: 640       
+                   // }
+                    }
+                };
+            }
+
+            // Everything else i.e. Safari and Edge
+            else {
+               var constraints = {
+                    video: {
+                        audio: false,
+                        facingMode: shouldFaceUser ? "user" : "environment",
+                    }
+                };
+            }
+
+            return constraints;
+        }
+
+        function capture(constraints) {
+            navigator.mediaDevices.getUserMedia(constraints) // Returns a promise
+            .then(function(stream) {
+                video.srcObject = stream;
+
+                video.onloadedmetadata = function(e) {
+                    // play back video stream
+                    video.play();
+                    console.log('width is', this.videoWidth); // Get width and height of the users camera
+                    console.log('height is', this.videoHeight);
+                };
+
+                // Listeners for saving / recording video stream
+                var start = document.getElementById("startBtn");
+                let mediaRecorder = new MediaRecorder(stream); // Responsible for handling video stream
+                let chunks = [];
+
+                // Start recording
+                start.addEventListener("click", (e)=>{
+                    console.log("Recording..."); 
+
+                    var countdown = 7;
+
+                    document.getElementById("startBtn").style.display = "none";
+
+                    document.getElementById('timer').style.display = "inline";
+
+                    // Wait five seconds before runnning video recorder
+                    var timer = setInterval(function(){
+                        document.getElementById('count').innerHTML = (countdown - 2) + "...";
+                        countdown--; // Decrement timer
+
+                        if(countdown == 0)
+                        {
+                            record();
+                            
+                        }
+                    }, 1000);
+
+                    function record() {
+                        // Clear timer
+                        clearInterval(timer);
+                        document.getElementById('count').style.display = "none";
+                        document.getElementById('timer').style.display = "none";
+
+                        mediaRecorder.start();
+
+                        // Get rid of flip button
+                        document.getElementById("flip").style.display = "none";
+
+                        // Change button to show recording
+                        document.getElementById("recordBtn").style.display = "inline";
+
+                        // Stop recording after 5 seconds
+                        setTimeout(function(){
+                            console.log("Stopping recording...");
+                            mediaRecorder.stop();
+                        }, 5000);
+                    }
+                });
+
+                // Capture data when it becomes available
+                mediaRecorder.ondataavailable = function(e) {
+                    chunks.push(e.data); // Capture data
+                    console.log("Capturing data...");
+                };
+
+                // Display recorded video
+                mediaRecorder.onstop = (e)=>{
+                    console.log("Saving data.");
+                    let blob = new Blob(chunks, {"type" : "video/mp4;"}); // Blob --> Binary Large Object
+                    chunks = []
+                    //let videoURL = window.URL.createObjectURL(blob); // Url pointing to video source (reference)
+
+                    // Stop video being displayed
+                    document.getElementById('webcam').style.display = "none";
+                    document.getElementById('progress').style.visibility = "visible";
+
+                    // Post video to Flask using Ajax
+                    // Should be that the response from Flask is just a boolean on success or not
+                    $.ajax({
+                        type: "POST",
+                        enctype: 'multipart/form-data',
+                        url: "{{url_for('recording_page')}}",
+                        data: blob,
+                        contentType: false,
+                        processData: false,
+                        success: function(response) {
+                            // data.video
+                            console.log(response);
+                            let temp = response.data; // Extract data from response
+                            window.location.replace('/recording_results?video=' + JSON.stringify(temp))
+                    }});
+                };
+            })
+            .catch(function(err) {
+                console.log(err.name, err.message);
+                // For if camera is in use by another app
+                if (err.name == "NotReadableError") {
+                   document.getElementById("cameraerr").style.display = "inline";
+                }
+
+                else if (err.name == "OverconstrainedError") {
+                    // This will occur if a camera is not detected
+                    document.getElementById("noCamera").style.display = "inline";
+                }
+
+                else if (err.name == "NotFoundError") {
+                    // This will occur if a camera is not detected
+                    document.getElementById("noCamera").style.display = "inline";
+                }
+
+                else {
+                    // General error handler
+                    document.getElementById("error").style.display = "inline";
+                }
+            });
+        }
+
+        // Set up constraints
+        let constraints = setConstraints();
+
+        // Call capture
+        capture(constraints);
+
+        // Add event listener for flipping camera
+        flipBtn.addEventListener("click", function(){
+            // Stop everything and flip
+            video.pause();
+            shouldFaceUser = !shouldFaceUser;
+            video.srcObject = null;
+            let constraints = setConstraints();
+            capture(constraints); // recall
+        })
+
+    </script>
+</div>
+{% endblock %}

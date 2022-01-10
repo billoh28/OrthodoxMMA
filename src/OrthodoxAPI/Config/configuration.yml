@@ -1,0 +1,7 @@
+# This should be private, no one should have access to these credentials
+DBConfigs:
+  Host: "orthodoxcred.c9omrl6fspnx.eu-west-1.rds.amazonaws.com"
+  Port: 3306
+  User: "admin"
+  DBName: "OrthodoxCred"
+  Password: "FYProject1"

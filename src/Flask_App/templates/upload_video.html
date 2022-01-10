@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+    <div class="text">
+        <br>
+        <h3>Upload Video</h3>
+        <br>
+        <p style="text-align: center;">Requires a video of you approximately 2 metres away from the camera performing the correct action. </p>
+        <p style="text-align: center;">The video should be no more that 15 seconds. </p>
+        <br><br>
+        <div class="uploader-container" style="display:inline">
+            <form action="/uploader" method="POST" enctype="multipart/form-data" id="myForm" onsubmit="myFunction()">
+              <div class="form-group">
+                <label class="btn btn-outline-primary" for="file-upload">
+                    <p id="file-name" class="file-upload-name">Click me to choose a file...</p>
+                </label>
+                <input type="file" class="form-control-file" name="video_upload" id="file-upload" required/>
+                <br><br>
+                <p id="error" style="color:red;display:none;text-align:center;">Please select a file before continuing</p>
+                <input type="submit" class="btn btn-primary" value="Upload" id="uploadBtn"/>
+                <small id="fileHelp" class="form-text text-muted"></small>  
+              </div>
+            </form>
+        </div>
+    <div class="progress" style="display:none;">
+        <h3 style="text-align:center;">Loading</h3>
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:100%;"></div>
+    </div>
+    </div>
+    <script>
+        document.querySelector("#file-upload").onchange = function(){
+            document.querySelector("#file-name").textContent = this.files[0].name;
+            console.log(this.files[0].name);
+        }
+
+        var upload = document.getElementById("uploadBtn");
+        var upCont = document.getElementById("uploader-container");
+        var progress = document.getElementById("progress");
+
+        upload.addEventListener("click", function() {
+            // Check if file uploaded
+            let fileName = document.querySelector("#file-name").textContent;
+            if(fileName == "Click me to choose a file...")
+            {
+                //console.log("Ladies and gentlemen, we gottem");
+                // No file uploaded
+                document.getElementById("error").style.display = "block";
+            }
+        });
+
+        // Listener for page change
+        function myFunction() {
+            // Set displays for div objects
+            // Objects do not exist at this point so can't actually display progress bar
+            console.log("Switching sides!");
+        };
+
+    </script>
+</div>
+{% endblock %}

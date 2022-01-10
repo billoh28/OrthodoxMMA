@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+   <!-- Style sheets -->
+   <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/layout.css') }}">
+
+   <!-- JQuery -->
+   <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+   <!-- I think google logo for signing up -->
+   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+   <!-- Login Bootstrap CSS-->
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+	<blockquote class="blockquote text-center">
+        {% block content %}{% endblock %}
+    </blockquote>
+</body>

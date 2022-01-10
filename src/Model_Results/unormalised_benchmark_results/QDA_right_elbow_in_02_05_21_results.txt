@@ -1,0 +1,29 @@
+JOBLIB X done
+JOBLIB y done
+==========
+Training :  QDA_right_elbow_in_02_05_21.pkl
+==========
+Model achieved the following validation score in training :  0.9972144846796658
+Reached end of video
+{'0': 108, '1': 7}
+Reached end of video
+{'0': 84, '1': 32}
+Reached end of video
+{'0': 88, '1': 28}
+Reached end of video
+{'0': 0, '1': 115}
+Reached end of video
+{'0': 0, '1': 118}
+Reached end of video
+{'0': 15, '1': 101}
+Number correct in validation : 6, out of 6
+Testing accuracy : 100.00
+              precision    recall  f1-score   support
+
+     Correct       0.99      1.00      1.00       357
+   Incorrect       1.00      0.99      1.00       361
+
+    accuracy                           1.00       718
+   macro avg       1.00      1.00      1.00       718
+weighted avg       1.00      1.00      1.00       718
+

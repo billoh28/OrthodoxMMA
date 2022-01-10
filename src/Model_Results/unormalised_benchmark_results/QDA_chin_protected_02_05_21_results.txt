@@ -1,0 +1,25 @@
+JOBLIB X done
+JOBLIB y done
+==========
+Training :  QDA_chin_protected_02_05_21.pkl
+==========
+Model achieved the following validation score in training :  1.0
+Reached end of video
+{'0': 289, '1': 0}
+Reached end of video
+{'0': 352, '1': 0}
+Reached end of video
+{'0': 0, '1': 324}
+Reached end of video
+{'0': 0, '1': 328}
+Number correct in validation : 4, out of 4
+Testing accuracy : 100.00
+              precision    recall  f1-score   support
+
+     Correct       1.00      1.00      1.00       337
+   Incorrect       1.00      1.00      1.00       383
+
+    accuracy                           1.00       720
+   macro avg       1.00      1.00      1.00       720
+weighted avg       1.00      1.00      1.00       720
+

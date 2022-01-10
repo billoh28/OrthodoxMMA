@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+    <div class="training-text">
+        <br>
+        <h1>Form Training</h1>
+        <br>
+
+        <div class="options-wrapper">
+            <div class="column-1">
+                <div class="card-header">Jab Training</div>
+                <div class="card-body">
+                    <img class="training-image" src="{{ url_for('static', filename='styles/images/banner/jab_1_annotated.jpg') }}" alt="">
+                    <p class="training-para">Ensure your jab form is on track with our jab form checker. Submit a live or pre-recorded video to our models and receive a feedback report on your jab form.</p>
+                    <a type="button" class="btn btn-primary" href="/training_page?choice=jab">Try now!</a>
+                </div>
+            </div>
+            
+            <div class="column-2">
+                <div class="card-header">Straight Training</div>
+                <div class="card-body">
+                    <img class="training-image" src="{{ url_for('static', filename='styles/images/banner/straight_punch_1.jpg') }}" alt="">
+                    <p class="training-para">Ensure your straight form is on track with our straight form checker. Submit a live or pre-recorded video to our models and receive a feedback report on your staright punch form.</p>
+                    <a type="button" class="btn btn-primary" >Coming Soon</a>
+                </div>
+            </div>
+
+
+            <div class="column-3">
+                <div class="card-header">Stance Training</div>
+                <div class="card-body">
+                    <img class="training-image" src="{{ url_for('static', filename='styles/images/banner/stance_1_annotated.jpg') }}" alt="">
+                    <p class="training-para">Ensure your orthodox stance is correct with our stance checker. Submit a live or pre-recorded video to our models and receive a feedback report on the quality of your stance.</p>
+                    <a type="button" class="btn btn-primary" >Coming Soon</a>
+                </div>
+            </div>
+        </div>
+
+        <p>{{bad_request}}</p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,228 @@
+JOBLIB X done
+JOBLIB y done
+[11, 12, 14, 24]
+06_05_21
+==========
+Training :  Gradient Boosting
+==========
+Model achieved the following validation score in training :  0.9972144846796658
+              precision    recall  f1-score   support
+
+     Correct       1.00      0.99      1.00       368
+   Incorrect       0.99      1.00      1.00       350
+
+    accuracy                           1.00       718
+   macro avg       1.00      1.00      1.00       718
+weighted avg       1.00      1.00      1.00       718
+
+==========
+Testing :  Gradient Boosting
+==========
+Reached end of video
+{'0': 115, '1': 0}
+Reached end of video
+{'0': 116, '1': 0}
+Reached end of video
+{'0': 116, '1': 0}
+Reached end of video
+{'0': 0, '1': 115}
+Reached end of video
+{'0': 0, '1': 118}
+Reached end of video
+{'0': 0, '1': 116}
+Testing results : 6, out of 6 (100.00%)
+==========
+==========
+==========
+==========
+Training :  Nearest Neighbors
+==========
+Model achieved the following validation score in training :  1.0
+              precision    recall  f1-score   support
+
+     Correct       1.00      1.00      1.00       366
+   Incorrect       1.00      1.00      1.00       352
+
+    accuracy                           1.00       718
+   macro avg       1.00      1.00      1.00       718
+weighted avg       1.00      1.00      1.00       718
+
+==========
+Testing :  Nearest Neighbors
+==========
+Reached end of video
+{'0': 115, '1': 0}
+Reached end of video
+{'0': 116, '1': 0}
+Reached end of video
+{'0': 116, '1': 0}
+Reached end of video
+{'0': 0, '1': 115}
+Reached end of video
+{'0': 0, '1': 118}
+Reached end of video
+{'0': 0, '1': 116}
+Testing results : 6, out of 6 (100.00%)
+==========
+==========
+==========
+==========
+Training :  Linear SVM
+==========
+Model achieved the following validation score in training :  1.0
+              precision    recall  f1-score   support
+
+     Correct       1.00      1.00      1.00       366
+   Incorrect       1.00      1.00      1.00       352
+
+    accuracy                           1.00       718
+   macro avg       1.00      1.00      1.00       718
+weighted avg       1.00      1.00      1.00       718
+
+==========
+Testing :  Linear SVM
+==========
+Reached end of video
+{'0': 115, '1': 0}
+Reached end of video
+{'0': 116, '1': 0}
+Reached end of video
+{'0': 116, '1': 0}
+Reached end of video
+{'0': 0, '1': 115}
+Reached end of video
+{'0': 0, '1': 118}
+Reached end of video
+{'0': 0, '1': 116}
+Testing results : 6, out of 6 (100.00%)
+==========
+==========
+==========
+==========
+Training :  RBF SVM
+==========
+Model achieved the following validation score in training :  0.9972144846796658
+              precision    recall  f1-score   support
+
+     Correct       1.00      0.99      1.00       368
+   Incorrect       0.99      1.00      1.00       350
+
+    accuracy                           1.00       718
+   macro avg       1.00      1.00      1.00       718
+weighted avg       1.00      1.00      1.00       718
+
+==========
+==========
+==========
+==========
+Training :  Gaussian Process
+==========
+Model achieved the following validation score in training :  0.9972144846796658
+              precision    recall  f1-score   support
+
+     Correct       1.00      0.99      1.00       368
+   Incorrect       0.99      1.00      1.00       350
+
+    accuracy                           1.00       718
+   macro avg       1.00      1.00      1.00       718
+weighted avg       1.00      1.00      1.00       718
+
+==========
+==========
+==========
+==========
+Training :  Decision Tree
+==========
+Model achieved the following validation score in training :  1.0
+              precision    recall  f1-score   support
+
+     Correct       1.00      1.00      1.00       366
+   Incorrect       1.00      1.00      1.00       352
+
+    accuracy                           1.00       718
+   macro avg       1.00      1.00      1.00       718
+weighted avg       1.00      1.00      1.00       718
+
+==========
+Testing :  Decision Tree
+==========
+Reached end of video
+{'0': 115, '1': 0}
+Reached end of video
+{'0': 116, '1': 0}
+Reached end of video
+{'0': 116, '1': 0}
+Reached end of video
+{'0': 0, '1': 115}
+Reached end of video
+{'0': 0, '1': 118}
+Reached end of video
+{'0': 0, '1': 116}
+Testing results : 6, out of 6 (100.00%)
+==========
+==========
+==========
+==========
+Training :  Random Forest
+==========
+Model achieved the following validation score in training :  0.9958217270194986
+              precision    recall  f1-score   support
+
+     Correct       1.00      0.99      1.00       369
+   Incorrect       0.99      1.00      1.00       349
+
+    accuracy                           1.00       718
+   macro avg       1.00      1.00      1.00       718
+weighted avg       1.00      1.00      1.00       718
+
+==========
+==========
+==========
+==========
+Training :  Neural Net
+==========
+Model achieved the following validation score in training :  0.9916434540389972
+              precision    recall  f1-score   support
+
+     Correct       0.98      1.00      0.99       360
+   Incorrect       1.00      0.98      0.99       358
+
+    accuracy                           0.99       718
+   macro avg       0.99      0.99      0.99       718
+weighted avg       0.99      0.99      0.99       718
+
+==========
+==========
+==========
+==========
+Training :  AdaBoost
+==========
+Model achieved the following validation score in training :  0.903899721448468
+              precision    recall  f1-score   support
+
+     Correct       1.00      0.84      0.91       435
+   Incorrect       0.80      1.00      0.89       283
+
+    accuracy                           0.90       718
+   macro avg       0.90      0.92      0.90       718
+weighted avg       0.92      0.90      0.90       718
+
+==========
+==========
+==========
+==========
+Training :  Naive Bayes
+==========
+Model achieved the following validation score in training :  0.9930362116991643
+              precision    recall  f1-score   support
+
+     Correct       1.00      0.99      0.99       371
+   Incorrect       0.99      1.00      0.99       347
+
+    accuracy                           0.99       718
+   macro avg       0.99      0.99      0.99       718
+weighted avg       0.99      0.99      0.99       718
+
+==========
+==========
+==========

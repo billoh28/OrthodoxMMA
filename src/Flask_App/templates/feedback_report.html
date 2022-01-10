@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+    <div class="video_feed">
+    	<h3>Training Results</h3>
+        <pre id="feedback">{{feedback}}</pre>
+        <p hidden id="feedback_dic">{{feedback_dictionary}}</p>
+        
+        <button onClick="saveData()" id="saveBtn">Click me to save!</button>
+        <br><br>
+        <a type="button" class="btn btn-primary" href="{{ url_for('training_page') }}">Try again!</a>
+        <!-- Some JS to send a post request containing data to be saved -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> <!-- For Ajax -->
+        <script type="text/javascript">
+            function saveData()
+            {
+                var data = document.getElementById("feedback_dic").textContent;
+                console.log(JSON.stringify(data));
+                $.ajax({
+                    type: "POST",
+                    url: "{{url_for('save_feedback_page')}}",
+                    contentType: 'application/json',
+                    processData: false,
+                    data: JSON.stringify({"data":data}),
+                    success: function(data) {
+                        // Redirect to home
+                        window.location.replace("{{url_for('feedback_page')}}");
+                    }
+                });
+            };
+        </script> 
+    </div>
+</div>
+{% endblock %}

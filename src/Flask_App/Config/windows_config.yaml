@@ -1,0 +1,4 @@
+model_location: "C:/Users/Bill/3D Objects/CA400-Project/JAB"
+upload_location: "static/tmp_video"
+feedback_location: "static/feedback_report"
+allowed_extentions: "MP4"

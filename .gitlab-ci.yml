@@ -1,0 +1,22 @@
+image: python:3.8
+
+stages:
+    - build
+    - test
+    
+build:
+    stage: build
+    script:
+        - echo "Building"
+
+test-all:
+    stage: test
+    script: 
+        - make build_py
+        - make installs
+        - echo "Testing using unittests in Flask_App directory"
+        - make testApp
+        - echo "Testing Ad Hoc functions"
+        - make testAdHoc
+        
+        

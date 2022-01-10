@@ -1,0 +1,148 @@
+# _/home/ec2-user/2021-ca400-connok27-ohanlow2/src/OrthodoxAPI/Controller
+Controller/Credentials.go:61:6: no new variables on left side of :=
+Controller/Credentials.go:72:6: no new variables on left side of :=
+# _/home/ec2-user/2021-ca400-connok27-ohanlow2/src/OrthodoxAPI/Controller
+Controller/Credentials.go:61:6: no new variables on left side of :=
+Controller/Credentials.go:72:6: no new variables on left side of :=
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /user-api/user            --> _/home/ec2-user/2021-ca400-connok27-ohanlow2/src/OrthodoxAPI/Controller.GetUsers (3 handlers)
+[GIN-debug] POST   /user-api/user            --> _/home/ec2-user/2021-ca400-connok27-ohanlow2/src/OrthodoxAPI/Controller.CreateUser (3 handlers)
+[GIN-debug] GET    /user-api/user/:email     --> _/home/ec2-user/2021-ca400-connok27-ohanlow2/src/OrthodoxAPI/Controller.GetUserByEmail (3 handlers)
+[GIN-debug] PUT    /user-api/user/:email     --> _/home/ec2-user/2021-ca400-connok27-ohanlow2/src/OrthodoxAPI/Controller.UpdateUser (3 handlers)
+[GIN-debug] DELETE /user-api/user/:email     --> _/home/ec2-user/2021-ca400-connok27-ohanlow2/src/OrthodoxAPI/Controller.DeleteUser (3 handlers)
+[GIN-debug] GET    /user-api-feedback/user/:email --> _/home/ec2-user/2021-ca400-connok27-ohanlow2/src/OrthodoxAPI/Controller.GetAllFeedbacks (3 handlers)
+[GIN-debug] POST   /user-api-feedback/user   --> _/home/ec2-user/2021-ca400-connok27-ohanlow2/src/OrthodoxAPI/Controller.CreateFeedback (3 handlers)
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080
+[GIN] 2021/04/24 - 17:25:33 | 200 |    1.343132ms |       127.0.0.1 | GET      "/user-api/user/test2@gmail.com"
+[GIN] 2021/04/24 - 18:25:29 | 200 |    1.301147ms |       127.0.0.1 | GET      "/user-api-feedback/user/test2@gmail.com"
+[GIN] 2021/04/24 - 18:25:31 | 200 |    1.344572ms |       127.0.0.1 | GET      "/user-api-feedback/user/test2@gmail.com"
+[GIN] 2021/04/24 - 18:25:39 | 200 |    1.345088ms |       127.0.0.1 | GET      "/user-api-feedback/user/test2@gmail.com"
+[GIN] 2021/04/24 - 18:25:41 | 200 |    1.363764ms |       127.0.0.1 | GET      "/user-api-feedback/user/test2@gmail.com"
+[GIN] 2021/04/24 - 18:26:10 | 200 |    1.377678ms |       127.0.0.1 | GET      "/user-api-feedback/user/test2@gmail.com"
+[GIN] 2021/04/24 - 18:26:13 | 200 |    1.399069ms |       127.0.0.1 | GET      "/user-api-feedback/user/test2@gmail.com"
+[GIN] 2021/04/24 - 18:26:16 | 200 |    1.504456ms |       127.0.0.1 | GET      "/user-api-feedback/user/test2@gmail.com"
+[GIN] 2021/04/24 - 19:55:33 | 200 |    1.333103ms |       127.0.0.1 | GET      "/user-api/user/test123@gmail.com"
+[GIN] 2021/04/24 - 19:55:43 | 200 |    1.286317ms |       127.0.0.1 | GET      "/user-api/user/test123@gmail.com"
+[mysql] 2021/04/26 09:15:57 packets.go:123: closing bad idle connection: EOF
+[mysql] 2021/04/26 09:15:57 connection.go:173: driver: bad connection
+[GIN] 2021/04/26 - 09:15:57 | 200 |   63.014592ms |       127.0.0.1 | GET      "/user-api/user/test123@gmail.com"
+[GIN] 2021/04/26 - 09:29:07 | 200 |    1.740856ms |       127.0.0.1 | GET      "/user-api/user/test123@gmail.com"
+[GIN-debug] redirecting request 307: /user-api-feedback/user --> /user-api-feedback/user
+[GIN] 2021/04/26 - 09:32:44 | 200 |   11.667704ms |       127.0.0.1 | POST     "/user-api-feedback/user"
+[GIN] 2021/04/26 - 09:32:44 | 200 |    1.344902ms |       127.0.0.1 | GET      "/user-api-feedback/user/test123@gmail.com"
+[GIN] 2021/04/26 - 09:44:49 | 200 |     1.34898ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/04/26 - 10:24:25 | 404 |    2.552469ms |       127.0.0.1 | GET      "/user-api/user/guest@test.com"
+[GIN] 2021/04/26 - 10:24:25 | 200 |    6.015696ms |       127.0.0.1 | POST     "/user-api/user"
+[GIN] 2021/04/26 - 10:24:50 | 200 |    5.463771ms |       127.0.0.1 | GET      "/user-api/user/guest@test.com"
+[GIN] 2021/04/26 - 10:49:34 | 200 |    1.301241ms |       127.0.0.1 | GET      "/user-api/user/guest@test.com"
+[GIN] 2021/04/26 - 11:06:30 | 200 |    1.411791ms |       127.0.0.1 | GET      "/user-api/user/guest@test.com"
+[GIN] 2021/04/26 - 11:07:47 | 200 |     1.22875ms |       127.0.0.1 | GET      "/user-api/user/guest@test.com"
+[GIN] 2021/04/26 - 11:07:49 | 200 |    1.303929ms |       127.0.0.1 | GET      "/user-api/user/testy@gmail.com"
+[GIN] 2021/04/26 - 11:09:16 | 200 |    1.565206ms |       127.0.0.1 | GET      "/user-api-feedback/user/test12@gmail.com"
+[mysql] 2021/04/27 16:54:25 packets.go:123: closing bad idle connection: EOF
+[mysql] 2021/04/27 16:54:25 connection.go:173: driver: bad connection
+[GIN] 2021/04/27 - 16:54:25 | 200 |   65.837677ms |       127.0.0.1 | GET      "/user-api/user/testy@gmail.com"
+[GIN-debug] redirecting request 301: /user-api/user --> /user-api/user
+[GIN] 2021/04/27 - 20:41:56 | 200 |     878.347µs |       127.0.0.1 | GET      "/user-api/user"
+[GIN] 2021/04/27 - 20:44:06 | 404 |    1.316667ms |       127.0.0.1 | GET      "/user-api/user/schmello@gmail.com"
+[GIN] 2021/04/27 - 20:44:06 | 200 |   12.272848ms |       127.0.0.1 | POST     "/user-api/user"
+[GIN] 2021/04/27 - 20:45:09 | 200 |    1.405385ms |       127.0.0.1 | GET      "/user-api-feedback/user/schmello@gmail.com"
+[GIN] 2021/04/27 - 20:45:26 | 200 |     1.30329ms |       127.0.0.1 | GET      "/user-api/user/schmello@gmail.com"
+[GIN] 2021/04/27 - 20:46:15 | 200 |   12.064839ms |       127.0.0.1 | DELETE   "/user-api/user/schmello@gmail.com"
+[GIN] 2021/04/27 - 20:46:23 | 404 |    1.223626ms |       127.0.0.1 | GET      "/user-api/user/schmello@gmail.com"
+[mysql] 2021/04/28 14:42:24 packets.go:123: closing bad idle connection: EOF
+[mysql] 2021/04/28 14:42:24 connection.go:173: driver: bad connection
+[GIN] 2021/04/28 - 14:42:25 | 200 |   52.853014ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/04/28 - 14:42:31 | 200 |    1.396525ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/04/28 - 14:47:37 | 404 |    1.420007ms |       127.0.0.1 | GET      "/user-api/user/blas@gmail.com"
+[GIN] 2021/04/28 - 14:47:37 | 200 |   12.339482ms |       127.0.0.1 | POST     "/user-api/user"
+[GIN] 2021/04/28 - 14:47:45 | 200 |    1.421906ms |       127.0.0.1 | GET      "/user-api/user/blas@gmail.com"
+[GIN] 2021/04/28 - 14:47:50 | 200 |    1.318359ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/04/28 - 14:48:25 | 200 |   10.725468ms |       127.0.0.1 | GET      "/user-api-feedback/user/test12@gmail.com"
+[GIN] 2021/04/28 - 14:48:36 | 200 |    1.323553ms |       127.0.0.1 | GET      "/user-api-feedback/user/test12@gmail.com"
+[GIN] 2021/04/28 - 15:13:40 | 200 |    1.244797ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/04/28 - 15:13:41 | 200 |    1.567873ms |       127.0.0.1 | GET      "/user-api-feedback/user/test12@gmail.com"
+[GIN] 2021/04/28 - 15:13:56 | 200 |    1.612399ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/04/28 - 15:13:58 | 200 |    1.402695ms |       127.0.0.1 | GET      "/user-api-feedback/user/test12@gmail.com"
+[GIN] 2021/04/28 - 18:55:09 | 200 |    1.741519ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[mysql] 2021/04/29 17:32:38 packets.go:123: closing bad idle connection: EOF
+[mysql] 2021/04/29 17:32:38 connection.go:173: driver: bad connection
+[GIN] 2021/04/29 - 17:32:38 | 200 |     45.2842ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/04/29 - 19:34:27 | 200 |    1.355157ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/04/29 - 19:34:31 | 200 |    1.289419ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[mysql] 2021/04/30 11:14:08 packets.go:123: closing bad idle connection: EOF
+[mysql] 2021/04/30 11:14:08 connection.go:173: driver: bad connection
+[GIN] 2021/04/30 - 11:14:08 | 200 |    70.34028ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/04/30 - 11:28:34 | 200 |    5.504931ms |       127.0.0.1 | GET      "/user-api-feedback/user/test12@gmail.com"
+[mysql] 2021/05/01 11:25:19 packets.go:123: closing bad idle connection: EOF
+[mysql] 2021/05/01 11:25:19 connection.go:173: driver: bad connection
+[GIN] 2021/05/01 - 11:25:19 | 404 |    53.57727ms |       127.0.0.1 | GET      "/user-api/user/test@gmail.com"
+[GIN] 2021/05/01 - 11:25:27 | 200 |    1.309822ms |       127.0.0.1 | GET      "/user-api/user/test2@gmail.com"
+[GIN] 2021/05/01 - 11:25:37 | 404 |    1.217014ms |       127.0.0.1 | GET      "/user-api/user/e3qd@ges.c"
+[GIN] 2021/05/01 - 11:25:37 | 200 |   22.280739ms |       127.0.0.1 | POST     "/user-api/user"
+[GIN] 2021/05/01 - 11:26:44 | 200 |    1.288588ms |       127.0.0.1 | GET      "/user-api/user/test2@gmail.com"
+[GIN] 2021/05/01 - 11:26:56 | 404 |     1.27159ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/01 - 11:26:56 | 200 |    8.185877ms |       127.0.0.1 | POST     "/user-api/user"
+[GIN] 2021/05/01 - 11:31:29 | 200 |    1.293343ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/01 - 11:33:06 | 200 |    1.417013ms |       127.0.0.1 | GET      "/user-api-feedback/user/t@g.c"
+[GIN] 2021/05/01 - 11:38:12 | 200 |    1.367059ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/01 - 12:13:36 | 200 |    1.221673ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/01 - 12:23:50 | 200 |    1.331704ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/01 - 12:23:53 | 200 |    1.239574ms |       127.0.0.1 | GET      "/user-api-feedback/user/t@g.c"
+[GIN] 2021/05/01 - 12:26:07 | 200 |    1.781279ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/01 - 16:32:30 | 200 |    1.388794ms |       127.0.0.1 | GET      "/user-api/user/test123@gmail.com"
+[GIN] 2021/05/01 - 16:32:33 | 200 |    1.317763ms |       127.0.0.1 | GET      "/user-api-feedback/user/test123@gmail.com"
+[GIN] 2021/05/01 - 16:41:00 | 200 |    1.762713ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[mysql] 2021/05/03 10:42:14 packets.go:123: closing bad idle connection: EOF
+[mysql] 2021/05/03 10:42:14 connection.go:173: driver: bad connection
+[GIN] 2021/05/03 - 10:42:14 | 404 |   82.035523ms |       127.0.0.1 | GET      "/user-api/user/testing@gmail.com"
+[GIN] 2021/05/03 - 10:42:14 | 200 |   13.696277ms |       127.0.0.1 | POST     "/user-api/user"
+[GIN] 2021/05/03 - 10:42:53 | 200 |    1.280264ms |       127.0.0.1 | GET      "/user-api-feedback/user/testing@gmail.com"
+[GIN] 2021/05/03 - 12:00:57 | 200 |    1.683719ms |       127.0.0.1 | GET      "/user-api/user/testing@gmail.com"
+[GIN] 2021/05/03 - 14:38:04 | 200 |    1.436013ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/03 - 16:06:09 | 200 |    1.223697ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/03 - 18:19:50 | 200 |    1.227097ms |       127.0.0.1 | GET      "/user-api-feedback/user/t@g.c"
+[GIN] 2021/05/03 - 18:24:41 | 200 |    1.263614ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/03 - 18:26:31 | 200 |    1.334524ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/03 - 19:16:45 | 200 |    1.309421ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/05/03 - 19:16:49 | 200 |    1.230234ms |       127.0.0.1 | GET      "/user-api/user/test12@gmail.com"
+[GIN] 2021/05/03 - 19:16:50 | 200 |    1.400027ms |       127.0.0.1 | GET      "/user-api-feedback/user/test12@gmail.com"
+[GIN] 2021/05/03 - 19:16:59 | 200 |     1.37781ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/03 - 19:17:01 | 200 |    1.263287ms |       127.0.0.1 | GET      "/user-api-feedback/user/t@g.c"
+[GIN] 2021/05/03 - 19:17:03 | 200 |    1.195973ms |       127.0.0.1 | GET      "/user-api-feedback/user/t@g.c"
+[GIN-debug] redirecting request 307: /user-api-feedback/user --> /user-api-feedback/user
+[GIN] 2021/05/03 - 19:17:21 | 200 |    9.248806ms |       127.0.0.1 | POST     "/user-api-feedback/user"
+[GIN] 2021/05/03 - 19:17:21 | 200 |    1.276657ms |       127.0.0.1 | GET      "/user-api-feedback/user/t@g.c"
+[GIN-debug] redirecting request 307: /user-api-feedback/user --> /user-api-feedback/user
+[GIN] 2021/05/03 - 19:17:45 | 200 |    6.176117ms |       127.0.0.1 | POST     "/user-api-feedback/user"
+[GIN] 2021/05/03 - 19:17:45 | 200 |    1.333298ms |       127.0.0.1 | GET      "/user-api-feedback/user/t@g.c"
+[mysql] 2021/05/04 12:02:04 packets.go:123: closing bad idle connection: EOF
+[mysql] 2021/05/04 12:02:04 connection.go:173: driver: bad connection
+[GIN] 2021/05/04 - 12:02:04 | 200 |   65.053111ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 13:53:04 | 200 |    1.333023ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 13:53:14 | 200 |    1.385816ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 14:37:12 | 404 |    1.325305ms |       127.0.0.1 | GET      "/user-api/user/test@gmail.com"
+[GIN] 2021/05/04 - 14:37:14 | 200 |    1.320045ms |       127.0.0.1 | GET      "/user-api/user/testy@gmail.com"
+[GIN] 2021/05/04 - 14:38:07 | 200 |    1.335992ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 14:39:17 | 200 |    1.255231ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 14:40:08 | 200 |    1.277613ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 14:45:50 | 200 |    1.304459ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 16:06:32 | 200 |    1.287714ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 17:20:19 | 200 |    1.341793ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 17:20:34 | 200 |    1.353752ms |       127.0.0.1 | GET      "/user-api/user/tester@gmail.com"
+[GIN] 2021/05/04 - 17:21:03 | 404 |    1.318462ms |       127.0.0.1 | GET      "/user-api/user/bill@bill.com"
+[GIN] 2021/05/04 - 17:21:03 | 200 |   16.146501ms |       127.0.0.1 | POST     "/user-api/user"
+[GIN] 2021/05/04 - 17:21:49 | 200 |    1.686324ms |       127.0.0.1 | GET      "/user-api/user/bill@bill.com"
+[GIN] 2021/05/04 - 19:26:17 | 200 |    1.215086ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 19:41:15 | 200 |    1.346715ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 19:45:34 | 200 |    1.280869ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN] 2021/05/04 - 19:54:46 | 200 |    1.357325ms |       127.0.0.1 | GET      "/user-api/user/t@g.c"
+[GIN-debug] redirecting request 307: /user-api-feedback/user --> /user-api-feedback/user
+[GIN] 2021/05/04 - 19:56:23 | 200 |    6.946305ms |       127.0.0.1 | POST     "/user-api-feedback/user"
+[GIN] 2021/05/04 - 19:56:23 | 200 |    1.276362ms |       127.0.0.1 | GET      "/user-api-feedback/user/t@g.c"

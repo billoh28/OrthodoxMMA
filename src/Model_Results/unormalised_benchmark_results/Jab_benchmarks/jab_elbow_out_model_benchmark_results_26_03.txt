@@ -1,0 +1,474 @@
+JOBLIB X done
+JOBLIB y done
+[11, 12, 14, 16, 23, 24]
+26_03_2021
+==========
+Training :  Nearest Neighbors
+==========
+Model achieved the following validation score in training :  0.9962825278810409
+==========
+Testing :  Nearest Neighbors
+==========
+Testing :  test_correct_1.mp4
+Reached end of video
+{'0': 14, '1': 44}
+Result :  1
+Testing :  test_correct_2.mp4
+Reached end of video
+{'0': 13, '1': 58}
+Result :  1
+Testing :  test_correct_3.mp4
+Reached end of video
+{'0': 14, '1': 63}
+Result :  1
+Testing :  test_correct_4.mp4
+Reached end of video
+{'0': 26, '1': 32}
+Result :  1
+Testing :  test_incorrect_1.mp4
+Reached end of video
+{'0': 55, '1': 21}
+Result :  0
+Testing :  test_incorrect_2.mp4
+Reached end of video
+{'0': 14, '1': 44}
+Result :  1
+Testing :  test_incorrect_3.mp4
+Reached end of video
+{'0': 15, '1': 50}
+Result :  1
+Testing :  test_incorrect_4.mp4
+Reached end of video
+{'0': 11, '1': 56}
+Result :  1
+Testing :  test_incorrect_5.mp4
+Reached end of video
+{'0': 26, '1': 34}
+Result :  1
+Number correct in validation : 4, out of 9
+==========
+==========
+==========
+==========
+Training :  Linear SVM
+==========
+Model achieved the following validation score in training :  1.0
+==========
+Testing :  Linear SVM
+==========
+Testing :  test_correct_1.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_correct_2.mp4
+Reached end of video
+{'0': 71, '1': 0}
+Result :  0
+Testing :  test_correct_3.mp4
+Reached end of video
+{'0': 77, '1': 0}
+Result :  0
+Testing :  test_correct_4.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_1.mp4
+Reached end of video
+{'0': 0, '1': 76}
+Result :  1
+Testing :  test_incorrect_2.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_3.mp4
+Reached end of video
+{'0': 65, '1': 0}
+Result :  0
+Testing :  test_incorrect_4.mp4
+Reached end of video
+{'0': 67, '1': 0}
+Result :  0
+Testing :  test_incorrect_5.mp4
+Reached end of video
+{'0': 0, '1': 60}
+Result :  1
+Number correct in validation : 6, out of 9
+==========
+==========
+==========
+==========
+Training :  RBF SVM
+==========
+Model achieved the following validation score in training :  0.4684014869888476
+==========
+Testing :  RBF SVM
+==========
+Testing :  test_correct_1.mp4
+Reached end of video
+{'0': 0, '1': 58}
+Result :  1
+Testing :  test_correct_2.mp4
+Reached end of video
+{'0': 0, '1': 71}
+Result :  1
+Testing :  test_correct_3.mp4
+Reached end of video
+{'0': 0, '1': 77}
+Result :  1
+Testing :  test_correct_4.mp4
+Reached end of video
+{'0': 0, '1': 58}
+Result :  1
+Testing :  test_incorrect_1.mp4
+Reached end of video
+{'0': 0, '1': 76}
+Result :  1
+Testing :  test_incorrect_2.mp4
+Reached end of video
+{'0': 0, '1': 58}
+Result :  1
+Testing :  test_incorrect_3.mp4
+Reached end of video
+{'0': 0, '1': 65}
+Result :  1
+Testing :  test_incorrect_4.mp4
+Reached end of video
+{'0': 0, '1': 67}
+Result :  1
+Testing :  test_incorrect_5.mp4
+Reached end of video
+{'0': 0, '1': 60}
+Result :  1
+Number correct in validation : 5, out of 9
+==========
+==========
+==========
+==========
+Training :  Gaussian Process
+==========
+Model achieved the following validation score in training :  0.8810408921933085
+==========
+Testing :  Gaussian Process
+==========
+Testing :  test_correct_1.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_correct_2.mp4
+Reached end of video
+{'0': 71, '1': 0}
+Result :  0
+Testing :  test_correct_3.mp4
+Reached end of video
+{'0': 77, '1': 0}
+Result :  0
+Testing :  test_correct_4.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_1.mp4
+Reached end of video
+{'0': 76, '1': 0}
+Result :  0
+Testing :  test_incorrect_2.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_3.mp4
+Reached end of video
+{'0': 65, '1': 0}
+Result :  0
+Testing :  test_incorrect_4.mp4
+Reached end of video
+{'0': 67, '1': 0}
+Result :  0
+Testing :  test_incorrect_5.mp4
+Reached end of video
+{'0': 58, '1': 2}
+Result :  0
+Number correct in validation : 4, out of 9
+==========
+==========
+==========
+==========
+Training :  Decision Tree
+==========
+Model achieved the following validation score in training :  0.9925650557620818
+==========
+Testing :  Decision Tree
+==========
+Testing :  test_correct_1.mp4
+Reached end of video
+{'0': 12, '1': 46}
+Result :  1
+Testing :  test_correct_2.mp4
+Reached end of video
+{'0': 34, '1': 37}
+Result :  1
+Testing :  test_correct_3.mp4
+Reached end of video
+{'0': 42, '1': 35}
+Result :  0
+Testing :  test_correct_4.mp4
+Reached end of video
+{'0': 25, '1': 33}
+Result :  1
+Testing :  test_incorrect_1.mp4
+Reached end of video
+{'0': 0, '1': 76}
+Result :  1
+Testing :  test_incorrect_2.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_3.mp4
+Reached end of video
+{'0': 34, '1': 31}
+Result :  0
+Testing :  test_incorrect_4.mp4
+Reached end of video
+{'0': 2, '1': 65}
+Result :  1
+Testing :  test_incorrect_5.mp4
+Reached end of video
+{'0': 0, '1': 60}
+Result :  1
+Number correct in validation : 4, out of 9
+==========
+==========
+==========
+==========
+Training :  Random Forest
+==========
+Model achieved the following validation score in training :  0.9962825278810409
+==========
+Testing :  Random Forest
+==========
+Testing :  test_correct_1.mp4
+Reached end of video
+{'0': 13, '1': 45}
+Result :  1
+Testing :  test_correct_2.mp4
+Reached end of video
+{'0': 14, '1': 57}
+Result :  1
+Testing :  test_correct_3.mp4
+Reached end of video
+{'0': 25, '1': 52}
+Result :  1
+Testing :  test_correct_4.mp4
+Reached end of video
+{'0': 26, '1': 32}
+Result :  1
+Testing :  test_incorrect_1.mp4
+Reached end of video
+{'0': 0, '1': 76}
+Result :  1
+Testing :  test_incorrect_2.mp4
+Reached end of video
+{'0': 57, '1': 1}
+Result :  0
+Testing :  test_incorrect_3.mp4
+Reached end of video
+{'0': 20, '1': 45}
+Result :  1
+Testing :  test_incorrect_4.mp4
+Reached end of video
+{'0': 8, '1': 59}
+Result :  1
+Testing :  test_incorrect_5.mp4
+Reached end of video
+{'0': 1, '1': 59}
+Result :  1
+Number correct in validation : 4, out of 9
+==========
+==========
+==========
+==========
+Training :  Neural Net
+==========
+Model achieved the following validation score in training :  0.9553903345724907
+==========
+Testing :  Neural Net
+==========
+Testing :  test_correct_1.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_correct_2.mp4
+Reached end of video
+{'0': 71, '1': 0}
+Result :  0
+Testing :  test_correct_3.mp4
+Reached end of video
+{'0': 77, '1': 0}
+Result :  0
+Testing :  test_correct_4.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_1.mp4
+Reached end of video
+{'0': 71, '1': 5}
+Result :  0
+Testing :  test_incorrect_2.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_3.mp4
+Reached end of video
+{'0': 65, '1': 0}
+Result :  0
+Testing :  test_incorrect_4.mp4
+Reached end of video
+{'0': 67, '1': 0}
+Result :  0
+Testing :  test_incorrect_5.mp4
+Reached end of video
+{'0': 22, '1': 38}
+Result :  1
+Number correct in validation : 5, out of 9
+==========
+==========
+==========
+==========
+Training :  AdaBoost
+==========
+Model achieved the following validation score in training :  0.9925650557620818
+==========
+Testing :  AdaBoost
+==========
+Testing :  test_correct_1.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_correct_2.mp4
+Reached end of video
+{'0': 71, '1': 0}
+Result :  0
+Testing :  test_correct_3.mp4
+Reached end of video
+{'0': 75, '1': 2}
+Result :  0
+Testing :  test_correct_4.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_1.mp4
+Reached end of video
+{'0': 5, '1': 71}
+Result :  1
+Testing :  test_incorrect_2.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_3.mp4
+Reached end of video
+{'0': 65, '1': 0}
+Result :  0
+Testing :  test_incorrect_4.mp4
+Reached end of video
+{'0': 67, '1': 0}
+Result :  0
+Testing :  test_incorrect_5.mp4
+Reached end of video
+{'0': 0, '1': 60}
+Result :  1
+Number correct in validation : 6, out of 9
+==========
+==========
+==========
+==========
+Training :  Naive Bayes
+==========
+Model achieved the following validation score in training :  0.8513011152416357
+==========
+Testing :  Naive Bayes
+==========
+Testing :  test_correct_1.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_correct_2.mp4
+Reached end of video
+{'0': 71, '1': 0}
+Result :  0
+Testing :  test_correct_3.mp4
+Reached end of video
+{'0': 76, '1': 1}
+Result :  0
+Testing :  test_correct_4.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_1.mp4
+Reached end of video
+{'0': 76, '1': 0}
+Result :  0
+Testing :  test_incorrect_2.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_3.mp4
+Reached end of video
+{'0': 65, '1': 0}
+Result :  0
+Testing :  test_incorrect_4.mp4
+Reached end of video
+{'0': 67, '1': 0}
+Result :  0
+Testing :  test_incorrect_5.mp4
+Reached end of video
+{'0': 0, '1': 60}
+Result :  1
+Number correct in validation : 5, out of 9
+==========
+==========
+==========
+==========
+Training :  QDA
+==========
+Model achieved the following validation score in training :  1.0
+==========
+Testing :  QDA
+==========
+Testing :  test_correct_1.mp4
+Reached end of video
+{'0': 57, '1': 1}
+Result :  0
+Testing :  test_correct_2.mp4
+Reached end of video
+{'0': 71, '1': 0}
+Result :  0
+Testing :  test_correct_3.mp4
+Reached end of video
+{'0': 77, '1': 0}
+Result :  0
+Testing :  test_correct_4.mp4
+Reached end of video
+{'0': 58, '1': 0}
+Result :  0
+Testing :  test_incorrect_1.mp4
+Reached end of video
+{'0': 0, '1': 76}
+Result :  1
+Testing :  test_incorrect_2.mp4
+Reached end of video
+{'0': 53, '1': 5}
+Result :  0
+Testing :  test_incorrect_3.mp4
+Reached end of video
+{'0': 46, '1': 19}
+Result :  0
+Testing :  test_incorrect_4.mp4
+Reached end of video
+{'0': 67, '1': 0}
+Result :  0
+Testing :  test_incorrect_5.mp4
+Reached end of video
+{'0': 1, '1': 59}
+Result :  1
+Number correct in validation : 6, out of 9
+==========
+==========
+==========

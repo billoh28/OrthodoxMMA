@@ -1,0 +1,53 @@
+JOBLIB X done
+JOBLIB y done
+==========
+Training :  QDA_jab_elbow_02_05_21.pkl
+==========
+Model achieved the following validation score in training :  0.9825282631038027
+Reached end of video
+{'0': 111, '1': 5}
+Reached end of video
+{'0': 125, '1': 17}
+Reached end of video
+{'0': 149, '1': 5}
+Reached end of video
+{'0': 115, '1': 1}
+Reached end of video
+{'0': 98, '1': 17}
+Reached end of video
+{'0': 109, '1': 7}
+Reached end of video
+{'0': 121, '1': 13}
+Reached end of video
+{'0': 112, '1': 4}
+Reached end of video
+{'0': 114, '1': 0}
+Reached end of video
+{'0': 125, '1': 27}
+Reached end of video
+{'0': 99, '1': 17}
+Reached end of video
+{'0': 109, '1': 10}
+Reached end of video
+{'0': 115, '1': 46}
+Reached end of video
+{'0': 81, '1': 39}
+Reached end of video
+{'0': 90, '1': 25}
+Reached end of video
+{'0': 90, '1': 25}
+Reached end of video
+{'0': 71, '1': 44}
+Reached end of video
+{'0': 114, '1': 0}
+Number correct in validation : 9, out of 18
+Testing accuracy : 50.00
+              precision    recall  f1-score   support
+
+     Correct       1.00      0.97      0.98      1013
+   Incorrect       0.97      1.00      0.98       933
+
+    accuracy                           0.98      1946
+   macro avg       0.98      0.98      0.98      1946
+weighted avg       0.98      0.98      0.98      1946
+

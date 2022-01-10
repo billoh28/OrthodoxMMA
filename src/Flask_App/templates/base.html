@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='styles/images/favicon.ico') }}">
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='styles/layout.css') }}">
+        <title>Orthodox</title>
+    </head>
+    <!-- These are need for the dropdown in the nav bar -->
+    <!-- jQuery is to make it much easier to use JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+
+    <body>
+        <div class="wrapper">   
+            <div class="page-content">
+                <div class="content">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                        <a class="navbar-brand" href="/home">Orthodox</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                      
+                        <div class="collapse navbar-collapse" id="navbarColor01">
+                          <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown show">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Training</a>
+                                <div class="dropdown-menu" style="position: absolute; transform: translate3d(0px, 37px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="bottom-start">
+                                    <a class="dropdown-item" href="/training_page">Training Home</a>
+                                    <a class="dropdown-item" href="/training_page?choice=jab">Jab Training</a>
+                                    <!-- <a class="dropdown-item" href="/training_page?choice=straight">Straight Training</a>
+                                    <a class="dropdown-item" href="/training_page?choice=hook">Hook Training</a> -->
+                                </div>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="feedback_page">Reports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="settings_page">Settings</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about_page">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </nav>
+                    <blockquote class="blockquote text-center">
+                        {% block content %}{% endblock %}
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

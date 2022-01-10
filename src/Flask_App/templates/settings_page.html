@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+    <legend>Settings</legend>
+    {%if msg == "Successfully changed password."%}
+    <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Well done!</strong> {{msg}}
+      </div>
+    {%elif msg%} 
+    <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Oh snap!</strong> {{msg}}
+    </div>
+    {% endif %}
+    <form action="" method="put">
+        <fieldset>
+            <h3>Change Password</h3>
+          <div class="form-group">
+            <label for="exampleInputPassword1">New Password</label>
+            <input type="password" id="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="New Password">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Confirm New Password</label>
+            <input type="password" id="conf_password" name="conf_password" class="form-control" id="exampleInputPassword1" placeholder="Confirm New Password">
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+
+    <!-- Delete Handling -->
+    <legend><h3>Delete Account</h3></legend>
+    <p id="error" style="display:none;color:red;">An error occured when attempting to delete your account</p>
+    <button id="deleteBtn" class="btn btn-primary">Submit</button>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+    // Sending DELTE Request using ajaz
+      var del = document.getElementById("deleteBtn");
+      del.addEventListener("click", (e)=>{
+          console.log("Deleting...");
+          $.ajax({
+            type: "DELETE",
+            url: "{{url_for('set_page')}}",
+            data: "",
+            success: function(){
+              window.location.replace('/');
+            }
+            /*
+            complete: function(xhr, textStatus) {
+              if (xhr.status != 204)
+              {
+                document.getElementById("error").style.display = "block";
+              }
+            } */
+          });
+      });
+    </script>
+</div>
+{% endblock %}

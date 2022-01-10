@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page">
+    <div class="banner-container">
+        <h1>Welcome</h1>
+        <img class="banner" src="{{ url_for('static', filename='styles/images/banner/banner_kick_annotated.jpg') }}" alt="">
+    </div>
+    <div class="text">
+        <br><br>
+        <h2>Our Goal</h2>
+        <br>
+        <p>This is an interactive web app built with the intention of allowing you to improve upon your Mixed Martial Art striking skills, without the need for expensive equipment or a dedicated personal trainer. We utilise Google's pose estimation technology to track the position of your body throughout an exercise, from video, and produce a feedback report detailing how we felt your form was during the exercise. Exercises can be pre-recorded and uploaded for feedback or performed live over a webcam, where feedback is provided post exercise. This web app is perfect for those who want to a new form of exercise at home, or those who want to improve upon existing skills, but cannot get access to an MMA gym due to restrictions or lockdown. For more information on the Google’s pose estimation technology please consider the following link: (<a href="https://ai.googleblog.com/2020/08/on-device-real-time-body-pose-tracking.html">BlazePose</a>)</p>
+        <br><br>
+        <h2>Getting Started</h2>
+        <br>
+        <p>To get started, please navigate to the training page, accessible through the navigation bar at the top of the page. On this page you will be presented with different strikes to test such as a jab, a straight punch, or a hook, and select which one you prefer. On the next page you will be given the option to upload a pre-recorded video of yourself performing the strike, or to perform the strike live over your webcam. Whichever method you choose is up to you as both methods will produce the same feedback report for the same form. Once the feedback report is generated, you can save it for future reference, or to track your progress. Have fun!</p>
+    </div>
+</div>
+{% endblock %}

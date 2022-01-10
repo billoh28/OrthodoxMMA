@@ -1,0 +1,194 @@
+JOBLIB X done
+JOBLIB y done
+[0, 9, 10, 11, 12, 14, 16, 18, 20]
+28_03_21
+==========
+Training :  Nearest Neighbors
+==========
+Model achieved the following validation score in training :  1.0
+==========
+Testing :  Nearest Neighbors
+==========
+Reached end of video
+{'0': 129, '1': 10}
+Reached end of video
+{'0': 159, '1': 0}
+Reached end of video
+{'0': 42, '1': 70}
+Reached end of video
+{'0': 0, '1': 129}
+Number correct in validation : 4, out of 4
+==========
+==========
+==========
+==========
+Training :  Linear SVM
+==========
+Model achieved the following validation score in training :  1.0
+==========
+Testing :  Linear SVM
+==========
+Reached end of video
+{'0': 135, '1': 4}
+Reached end of video
+{'0': 159, '1': 0}
+Reached end of video
+{'0': 0, '1': 112}
+Reached end of video
+{'0': 0, '1': 129}
+Number correct in validation : 4, out of 4
+==========
+==========
+==========
+==========
+Training :  RBF SVM
+==========
+Model achieved the following validation score in training :  0.48154093097913325
+==========
+Testing :  RBF SVM
+==========
+Reached end of video
+{'0': 139, '1': 0}
+Reached end of video
+{'0': 159, '1': 0}
+Reached end of video
+{'0': 112, '1': 0}
+Reached end of video
+{'0': 129, '1': 0}
+Number correct in validation : 2, out of 4
+==========
+==========
+==========
+==========
+Training :  Gaussian Process
+==========
+Model achieved the following validation score in training :  1.0
+==========
+Testing :  Gaussian Process
+==========
+Reached end of video
+{'0': 134, '1': 5}
+Reached end of video
+{'0': 159, '1': 0}
+Reached end of video
+{'0': 0, '1': 112}
+Reached end of video
+{'0': 0, '1': 129}
+Number correct in validation : 4, out of 4
+==========
+==========
+==========
+==========
+Training :  Decision Tree
+==========
+Model achieved the following validation score in training :  0.9951845906902087
+==========
+Testing :  Decision Tree
+==========
+Reached end of video
+{'0': 137, '1': 2}
+Reached end of video
+{'0': 159, '1': 0}
+Reached end of video
+{'0': 6, '1': 106}
+Reached end of video
+{'0': 0, '1': 129}
+Number correct in validation : 4, out of 4
+==========
+==========
+==========
+==========
+Training :  Random Forest
+==========
+Model achieved the following validation score in training :  0.9983948635634029
+==========
+Testing :  Random Forest
+==========
+Reached end of video
+{'0': 139, '1': 0}
+Reached end of video
+{'0': 159, '1': 0}
+Reached end of video
+{'0': 11, '1': 101}
+Reached end of video
+{'0': 0, '1': 129}
+Number correct in validation : 4, out of 4
+==========
+==========
+==========
+==========
+Training :  Neural Net
+==========
+Model achieved the following validation score in training :  1.0
+==========
+Testing :  Neural Net
+==========
+Reached end of video
+{'0': 125, '1': 14}
+Reached end of video
+{'0': 159, '1': 0}
+Reached end of video
+{'0': 0, '1': 112}
+Reached end of video
+{'0': 0, '1': 129}
+Number correct in validation : 4, out of 4
+==========
+==========
+==========
+==========
+Training :  AdaBoost
+==========
+Model achieved the following validation score in training :  0.9967897271268058
+==========
+Testing :  AdaBoost
+==========
+Reached end of video
+{'0': 138, '1': 1}
+Reached end of video
+{'0': 159, '1': 0}
+Reached end of video
+{'0': 15, '1': 97}
+Reached end of video
+{'0': 0, '1': 129}
+Number correct in validation : 4, out of 4
+==========
+==========
+==========
+==========
+Training :  Naive Bayes
+==========
+Model achieved the following validation score in training :  0.8073836276083467
+==========
+Testing :  Naive Bayes
+==========
+Reached end of video
+{'0': 95, '1': 44}
+Reached end of video
+{'0': 103, '1': 56}
+Reached end of video
+{'0': 0, '1': 112}
+Reached end of video
+{'0': 0, '1': 129}
+Number correct in validation : 4, out of 4
+==========
+==========
+==========
+==========
+Training :  QDA
+==========
+Model achieved the following validation score in training :  1.0
+==========
+Testing :  QDA
+==========
+Reached end of video
+{'0': 127, '1': 12}
+Reached end of video
+{'0': 159, '1': 0}
+Reached end of video
+{'0': 0, '1': 112}
+Reached end of video
+{'0': 0, '1': 129}
+Number correct in validation : 4, out of 4
+==========
+==========
+==========
